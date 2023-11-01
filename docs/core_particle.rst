@@ -1,4 +1,4 @@
-.. module:: char
+.. module:: core_particle
 
 core_particle.py Module
 =======================
