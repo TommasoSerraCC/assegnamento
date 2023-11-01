@@ -14,6 +14,12 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+import os
+import sys
+package_name = 'dumbsquare'
+package_root = os.path.abspath('..')
+sys.path.insert(0, package_root)
+sys.path.insert(0, os.path.join(package_root, package_name))
 
 # -- Project information -----------------------------------------------------
 
@@ -30,7 +36,7 @@ release = '0.0.0'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [
+extensions = ["sphinx.ext.autodoc"
 ]
 
 # Add any paths that contain templates here, relative to this directory.
