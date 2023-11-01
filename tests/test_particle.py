@@ -1,7 +1,7 @@
 """ Import module for unit tests """
 import unittest
 # Import Particle class from my module particle
-import particle.Particle
+from assignments.core_particle import Particle
 
 class TestParticle(unittest.TestCase):
     """ Class for unit tests """

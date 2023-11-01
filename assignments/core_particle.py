@@ -8,7 +8,7 @@ class Particle:
     """ Class describing a generic Particle """
 
     # Initialing the constructor
-    def init(self, mass, charge, name, beta=0.):
+    def __init__(self, mass, charge, name, beta=0.):
         """ Arguments:
             -particle mass (in MeV/c^2)
             -partcle charge (in e)
@@ -77,11 +77,3 @@ class Particle:
             logger.warning('Momentum must be greater than 0')
             return
         self.beta = value/(math.sqrt(value*2 + self.mass*2))
-
-
-if name=='main':
-    part=Particle(0.511, -1, 'electron')
-    part.print_info()
-    part.energy=1.
-    part.print_info()
-    print(part.momentum)
