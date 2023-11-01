@@ -7,4 +7,3 @@ char.py Module
    :members:
    :undoc-members:
 
-# Add other modules as needed
