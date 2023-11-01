@@ -5,7 +5,7 @@ import sys
 import io
 
 # Import the function 'process' from my module
-from assignments.char import process
+from assignments.charcount import process
 
 class TestProcess(unittest.TestCase):
     def test_test(self):
