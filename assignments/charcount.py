@@ -61,7 +61,7 @@ def process(file_path,bool):
 
 
 def republic_charcount_barchart(letters,frequencies):
-    """ Generating bar chart with frequencies of the letter of the 
+    """ Generating bar chart with frequencies of the letter of the
         alphabet contained in 'The Republic'
     """
     start_time = time.time()
@@ -71,7 +71,7 @@ def republic_charcount_barchart(letters,frequencies):
         plt.bar(letters, frequencies, edgecolor='black', alpha=0.9)
     except ValueError as e:
         print('Ops... Cannot produce the barchart if the arguments are not two lists of the same lenght')
-        
+
     plt.ylabel('Relative frequencies')
     plt.title('The Republic: characters count')
 
@@ -119,5 +119,4 @@ if __name__ == '__main__':
     barchart_option=args.p
 
     if barchart_option:
-        republic_charcount_barchart(letters_list, [3,7,1,34,5])
-        
+        republic_charcount_barchart(letters_list, frequencies_list)
