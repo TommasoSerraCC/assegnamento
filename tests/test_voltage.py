@@ -8,7 +8,7 @@ class TestVoltage(unittest.TestCase):
     """ Unit tests class """
 
     def setUp(self):
-        self.array1, self.array2 = np.loadtxt('/home/oem/Desktop/Computing_Methods/Workspace/assignments/assignments/fake_sample_data.txt', unpack = True)
+        self.array1, self.array2 = np.loadtxt('/assignments/assignments/fake_sample_data.txt', unpack = True)
         self.measurements = VoltageData(self.array1, self.array2)
 
     def test_load(self):
