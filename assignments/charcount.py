@@ -5,6 +5,7 @@ import time
 from loguru import logger
 import matplotlib.pyplot as plt
 
+
 def process(file_path,bool):
     """ Main processing method.
         Takes a file path and a boolean variable in imput
@@ -59,6 +60,28 @@ def process(file_path,bool):
     return freq_dict
 
 
+def republic_charcount_barchart(letters,frequencies):
+    """ Generating bar chart with frequencies of the letter of the 
+        alphabet contained in 'The Republic'
+    """
+    start_time = time.time()
+
+    logger.info('Generating bar chart of character frequencies')
+    try:
+        plt.bar(letters, frequencies, edgecolor='black', alpha=0.9)
+    except ValueError as e:
+        print('Ops... Cannot produce the barchart if the arguments are not two lists of the same lenght')
+        
+    plt.ylabel('Relative frequencies')
+    plt.title('The Republic: characters count')
+
+    # Showing total elapsed time for generating bar chart
+    logger.info('Bar chart printed in {:.3f}s'.format(time.time()-start_time))
+
+    # Showing bar chart
+    plt.show()
+
+
 
 
 if __name__ == '__main__':
@@ -96,15 +119,5 @@ if __name__ == '__main__':
     barchart_option=args.p
 
     if barchart_option:
-
-        # Generating bar chart
-        logger.info('Generating bar chart of character frequencies')
-        plt.bar(letters_list, frequencies_list, edgecolor='black', alpha=0.9)
-        plt.ylabel('Relative frequencies')
-        plt.title('The Republic: characters count')
-
-        # Showing total elapsed time for generating bar chart
-        logger.info('Bar chart printed in {:.3f}s'.format(time.time()-end_time))
-
-        # Showing bar chart
-        plt.show()
+        republic_charcount_barchart(letters_list, [3,7,1,34,5])
+        
