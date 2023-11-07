@@ -1,7 +1,7 @@
 """ Here we implement unit tests for 'voltage' package """
 
 import unittest
-import numpy
+import numpy as np
 from assignments.voltage import VoltageData
 
 class TestVoltage(unittest.TestCase):
@@ -13,8 +13,8 @@ class TestVoltage(unittest.TestCase):
 
     def test_load(self):
         """ Check if the two numpy arrays are correctly initialized """
-        self.assertTrue(numpy.allclose(self.array1, [1.,2.]))
-        self.assertTrue(numpy.allclose(self.array2, [3.,4.]))
+        self.assertTrue(np.allclose(self.array1, [1.,2.]))
+        self.assertTrue(np.allclose(self.array2, [3.,4.]))
 
     def test_constructor_up_left(self):
         """ Check if the upper left 2D matrix element is correctly
@@ -42,7 +42,7 @@ class TestVoltage(unittest.TestCase):
 
     def test_slicing(self):
         """ Check if the slicing is correctly implemented """
-        self.assertTrue(numpy.allclose(self.measurements[0:1,1],
+        self.assertTrue(np.allclose(self.measurements[0:1,1],
             self.array2[0:1]))
 
 
